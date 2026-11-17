@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased font-sans bg-[#f8fafc] text-slate-900 dark:bg-[#0d0f12] dark:text-slate-100 transition-colors duration-200;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
+
+/* Smooth Focus Ring */
+*:focus-visible {
+  @apply outline-none ring-2 ring-indigo-500/60 dark:ring-indigo-400/60 ring-offset-2 ring-offset-slate-50 dark:ring-offset-[#0d0f12];
+}
